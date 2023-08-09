@@ -1,0 +1,95 @@
+Alguns comando uteis cmd
+
+====Basico====
+
+| = contatena comando 
+/? = ajuda comando
+clip = copia para a area de tarefas
+Exit = sair
+cls = limpa tela 
+hostname = nome da maquina
+@echo off = não mostrar o caminho
+==========================================================================================================
+
+====Teclas de atalho====
+
+setas para cima e pra baixo comando ja utilizados
+Esc = limpa linha 
+F7 = historico 
+alt + f7 = limpa o historico
+F9 = pesquisa no historico 
+alt + f10 = Limpa macros 
+Tab = completa
+==========================================================================================================
+
+====Mexendo no prompt====
+
+echo = print 
+vol = volume do disco 
+ver = versão do win
+winver = versão com interfaçe grafica
+date /t = ver e alterar data 
+time /t = ver e alterar a hora 
+start = inicia um programa serviço 
+doskey = cria macros e alias 
+==========================================================================================================
+
+====Aparencia====
+
+title = muda o titulo da janela
+color = altera cor das letras e fundo
+mode = tamanho da tela 
+prompt = define o ver no "C:\user> " 
+==========================================================================================================
+
+====Mexendo com diretorios====
+
+dir = lista diretorios
+cd = muda diretorios
+cd .. = volta pro de cima 
+cd / = raiz
+md || mkdir = cria diretorio
+rd || rmdir =remove pasta
+path = variaveis de alis onde marmazena e cria
+copy = copiar
+rem || rename = renomear
+replace = subistitui um arquivo
+del || erase = deletar arquivos
+move = mover arquivo 
+attrib = atributos ex: oculto, arquivo do sistema ver e definar 
+==========================================================================================================
+
+====Mexendo com redes====
+
+ipconfig /all = infos da rede 
+ping = testar conexão 
+netstart = exibe portas e conexões tcp 
+ipconfig /displaydns = mostra todos os dns da maquina
+Ipconfig /flushdns = limpa cache dns
+nslookup = infos do dns rota, servidores
+Netsh WLAN export profile key=clear folder="C:\rede_perfil" = importa em xml todas as redes e senhas ja conectadas no pc
+netsh wlan connect name=$NAME ssid=$NAME = conectar a rede
+==========================================================================================================
+
+==== trabalhando com disco ====
+
+chkdsk = corrige erros no disco
+sfc scannow = verifica arquivos protegidos do sistema 
+diskpart = ferramenta para particionar formatar discos
+==========================================================================================================
+
+====Gerenciado de tarrefas====
+
+tasklist = lista todas as tarrefas
+Taskkill = mata as tarrefas
+==========================================================================================================
+
+==== Fluxo do codigo====
+:lugar onde ir
+
+goto lugar de sair e ir para o :
+==========================================================================================================
+
+====choise====
+
+
