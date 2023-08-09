@@ -69,6 +69,8 @@ Ipconfig /flushdns = limpa cache dns
 nslookup = infos do dns rota, servidores
 Netsh WLAN export profile key=clear folder="C:\rede_perfil" = importa em xml todas as redes e senhas ja conectadas no pc
 netsh wlan connect name=$NAME ssid=$NAME = conectar a rede
+Arp-a = mostrando as correspondências entre endereços IP e endereços MAC na rede local.
+tracert = usado para acompanhar todo o caminho do ip faz 
 ==========================================================================================================
 
 ==== trabalhando com disco ====
@@ -92,4 +94,140 @@ goto lugar de sair e ir para o :
 
 ====choise====
 
+choice /C opções /M "mensagem"  = usado para fazer menus com escolhas
 
+==== Fluxo ====
+
+Goto 1
+
+:1
+
+faz o caminho da execução ir para onde e especificado
+
+==========================================================================================================
+
+==== IF e Else ====
+
+Executa o processamento condicional nos programas em lotes.
+
+IF [NOT] ERRORLEVEL número comando
+IF [NOT] cadeia_de_caracteres1==cadeia_de_caracteres2 comando
+IF [NOT] EXIST nome_de_arquivo comando
+
+  NOT                     Especifica que o Windows só deve executar o
+                          comando se a condição for falsa.
+
+  ERRORLEVEL número       Especifica uma condição verdadeira se o
+                          último programa executado retornar um código de
+                          saída igual ou maior que o número especificado.
+
+  cadeia_de_caracteres1==cadeia_de_caracteres2  Especifica uma condição
+                          verdadeira se as cadeias de caracteres de texto
+                          especificadas
+                          forem correspondentes.
+
+  EXIST nome_de_arquivo   Especifica uma condição verdadeira se o nome de
+                          arquivo especificado existir.
+
+  comando                 Especifica o comando a ser executado se a condição
+                          for atendida. O comando pode ser seguido pelo
+                          comando ELSE, que executará o comando após a
+                          palavra-chave ELSE se a condição especificada
+                          for FALSA
+
+A cláusula ELSE deve ocorrer na mesma linha que o comando após o IF. Por
+exemplo:
+
+    IF EXIST nome_de_arquivo. (
+        del nome_de_arquivo.
+    ) ELSE (
+        echo nome_de_arquivo. ausente.
+    )
+
+O exemplo a seguir NÃO funcionaria porque o comando del precisa ser terminado
+por uma nova linha:
+
+    IF EXIST nome_de_arquivo. del nome_de_arquivo. ELSE echo nome_de_arquivo.
+    ausente
+
+O exemplo a seguir também não funcionaria, já que o comando ELSE deve estar
+na mesma linha que o final do comando IF:
+
+    IF EXIST nome_de_arquivo. del nome_de_arquivo.
+    ELSE echo nome_de_arquivo. ausente
+
+O exemplo a seguir funcionaria se você desejasse tudo isso em uma linha:
+
+    IF EXIST nome_de_arquivo. (del nome_de_arquivo.) ELSE echo
+    nome_de_arquivo. ausente
+
+Se as extensões de comando estiverem ativadas, o IF será alterado como
+a seguir:
+
+    IF [/I] cadeia de caracteres1 op_comparação cadeia de caracteres2 comando
+    IF CMDEXTVERSION número comando
+    IF DEFINED variável comando
+
+onde op_comparação pode ser uma das seguintes:
+
+    EQU - igual
+    NEQ - diferente
+    LSS - menor que
+    LEQ - menor que ou igual
+    GTR - maior que
+    GEQ - maior que ou igual
+
+e a opção /I, se especificada, informa para fazer comparações de cadeias de
+caracteres sem
+diferenciação de maiúsculas e minúsculas. A opção /I também pode ser usada na
+fórmula cadeia de caracteres1==cadeia de caracteres2 de IF. Essas comparações
+são genéricas, pois se cadeia de caracteres1 e cadeia de caracteres2
+contiverem todos os dígitos numéricos, as cadeias de caracteres serão
+convertidas em números e será executada uma comparação numérica.
+
+A condicional CMDEXTVERSION funciona como ERRORLEVEL, exceto por
+comparar com um número de versão interno associado às extensões de comandos
+. A primeira versão é 1. Ela será incrementada em um quando
+melhoras significativas forem adicionadas às extensões de comandos.
+A condicional CMDEXTVERSION nunca é verdadeira quando as extensões de
+comandos estão desativadas.
+
+A condicional DEFINED funciona como EXISTS, exceto por usar um nome de
+variável de ambiente e ser verdadeira se a variável de ambiente estiver
+definida.
+
+%ERRORLEVEL% expandirá para uma representação de cadeia de caracteres do
+valor atual de ERRORLEVEL, contanto que ainda não exista uma variável
+ambiente com o mesmo nome ERRORLEVEL, pois; nesse caso, será obtido o
+valor. Após executar um programa, o
+exemplo a seguir ilustra o uso ERRORLEVEL:
+
+    goto resposta%ERRORLEVEL%
+    :resposta0
+    echo O programa retornou o código 0
+    :resposta1
+    echo O programa retornou o código 1.
+
+Também é possível usar as comparações numéricas acima:
+
+    IF %ERRORLEVEL% LEQ 1 goto okay
+
+%CMDCMDLINE% expandirá para a linha de comando original transferida para
+CMD.EXE antes de qualquer processamento pelo CMD.EXE, contanto que ainda não
+haja uma variável de ambiente com o nome CMDCMDLINE, pois, nesse caso, será
+o seu valor.
+
+%CMDEXTVERSION% expandirá para uma representação da cadeia de
+caracteres do valor atual de CMDEXTVERSION, contanto que ainda não exista uma
+variável de ambiente com o nome CMDEXTVERSION, pois, neste caso, será obtido
+seu valor.
+
+
+==========================================================================================================
+
+==== Telnet ====
+
+Acesso remoto no servidor precisa ter o "telnet server" e no cliente o "telnet client"
+colocar ip e senha e ter acesso a maquina e
+
+==========================================================================================================
