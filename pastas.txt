@@ -1,0 +1,3 @@
+pasta de inicialização: shell:startup
+
+pasta de aplicativos: shell:appsfolder

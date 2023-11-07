@@ -32,6 +32,8 @@ date /t = ver e alterar data
 time /t = ver e alterar a hora 
 start = inicia um programa serviço 
 doskey = cria macros e alias 
+ver ou systeminfo = versão de compilação
+
 ==========================================================================================================
 
 ====Aparencia====

@@ -1,0 +1,11 @@
+1. `eq` (igual a): Este operador verifica se dois valores são iguais. Se os valores forem iguais, a expressão retorna verdadeira, caso contrário, retorna falsa.
+
+2. `ne` (diferente de): Este operador verifica se dois valores são diferentes. Se os valores forem diferentes, a expressão retorna verdadeira, caso contrário, retorna falsa.
+
+3. `gt` (maior que): Este operador verifica se o valor à esquerda é maior que o valor à direita. Se for verdade, a expressão retorna verdadeira, caso contrário, retorna falsa.
+
+4. `lt` (menor que): Este operador verifica se o valor à esquerda é menor que o valor à direita. Se for verdade, a expressão retorna verdadeira, caso contrário, retorna falsa.
+
+5. `ge` (maior ou igual a): Este operador verifica se o valor à esquerda é maior ou igual ao valor à direita. Se for verdade, a expressão retorna verdadeira, caso contrário, retorna falsa.
+
+6. `le` (menor ou igual a): Este operador verifica se o valor à esquerda é menor ou igual ao valor à direita. Se for verdade, a expressão retorna verdadeira, caso contrário, retorna falsa.
