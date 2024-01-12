@@ -1,0 +1,5 @@
+ADM:
+powershell -ExecutionPolicy ByPass -Verb RunAs -File "caminho\para\o\seu\arquivo.ps1"
+
+
+powershell -ExecutionPolicy ByPass -File "caminho\para\o\seu\arquivo.ps1"
