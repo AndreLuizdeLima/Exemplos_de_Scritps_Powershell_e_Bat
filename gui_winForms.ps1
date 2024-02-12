@@ -8,6 +8,7 @@ $main_form.Height = 400
 $main_form.AutoSize = $true
 
 
+
 $date1 = Get-Date
 $Label = New-Object System.Windows.Forms.Label
 $Label.Text = $date1

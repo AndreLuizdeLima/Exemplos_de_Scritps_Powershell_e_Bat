@@ -1,8 +1,13 @@
-﻿# Prompt the user to run the script as an administrator
-if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-  $arguments = "& '" + $MyInvocation.MyCommand.Definition + "'"
-  Start-Process powershell -Verb runAs -ArgumentList $arguments
-  Break
+﻿function MinhaFuncao {
+    # Coloque o código da sua função aqui
+    Write-Host "Esta é a minha função que requer privilégios de administrador."
+    Read-Host
 }
 
-# The rest of your script goes here
+if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    $arguments = "& '" + $MyInvocation.MyCommand.Definition + "'"
+    Start-Process powershell -Verb runAs -ArgumentList $arguments
+    Break
+} else {
+    MinhaFuncao
+}
